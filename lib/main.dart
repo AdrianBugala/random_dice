@@ -24,13 +24,23 @@ class _DicePageState extends State<DicePage> {
         child: Row(
           children: [
             Expanded(
-              child: Image.asset('images/dice1.png'),
+              child: TextButton(
+                onPressed: () {
+                  print('Left dice clicked');
+                },
+                child: Image.asset('images/dice1.png'),
+              ),
             ),
             const SizedBox(
               width: 10,
             ),
             Expanded(
-              child: Image.asset('images/dice2.png'),
+              child: TextButton(
+                onPressed: () {
+                  print('Right dice clicked');
+                },
+                child: Image.asset('images/dice2.png'),
+              ),
             ),
           ],
         ),
