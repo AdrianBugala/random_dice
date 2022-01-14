@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MaterialApp(
       home: Scaffold(
@@ -51,6 +52,13 @@ class _DicePageState extends State<DicePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(
+              'Rzut jedną kością',
+              style: GoogleFonts.lato(fontSize: 30),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
             SizedBox(
               height: 181,
               child: TextButton(
@@ -59,6 +67,16 @@ class _DicePageState extends State<DicePage> {
                 },
                 child: Image.asset('images/dice$centerDice.png'),
               ),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            Text(
+              'Rzut dwiema kośćmi',
+              style: GoogleFonts.lato(fontSize: 30),
+            ),
+            const SizedBox(
+              height: 15,
             ),
             Row(
               children: [
