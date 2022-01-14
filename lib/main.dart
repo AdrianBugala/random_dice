@@ -33,13 +33,6 @@ class _DicePageState extends State<DicePage> {
   void oneClicked() {
     setState(() {
       var random = Random();
-      leftDice = random.nextInt(6) + 1;
-    });
-  }
-
-  void centerClicked() {
-    setState(() {
-      var random = Random();
       centerDice = random.nextInt(6) + 1;
     });
   }
@@ -63,7 +56,7 @@ class _DicePageState extends State<DicePage> {
               height: 181,
               child: TextButton(
                 onPressed: () {
-                  centerClicked();
+                  oneClicked();
                 },
                 child: Image.asset('images/dice$centerDice.png'),
               ),
