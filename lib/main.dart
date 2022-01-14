@@ -1,20 +1,34 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() => runApp(MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Rzut kostką'),
+          centerTitle: true,
+        ),
+        body: DicePage(),
+      ),
+    ));
+
+class DicePage extends StatefulWidget {
+  @override
+  _DicePageState createState() => _DicePageState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+class _DicePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            child: Image.asset('images/dice1.png'),
+          ),
+          Expanded(
+            child: Image.asset('images/dice2.png'),
+          ),
+        ],
       ),
-      home: const Scaffold(),
     );
   }
 }
