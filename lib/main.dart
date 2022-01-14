@@ -19,15 +19,21 @@ class _DicePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
-        children: [
-          Expanded(
-            child: Image.asset('images/dice1.png'),
-          ),
-          Expanded(
-            child: Image.asset('images/dice2.png'),
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          children: [
+            Expanded(
+              child: Image.asset('images/dice1.png'),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: Image.asset('images/dice2.png'),
+            ),
+          ],
+        ),
       ),
     );
   }
